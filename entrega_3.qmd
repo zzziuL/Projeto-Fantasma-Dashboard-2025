@@ -1,10 +1,11 @@
 ---
 # Nome do arquivo PDF gerado na pasta resultado
-output-file: "Nome do alocado - análise 7 e 8"
+output-file: "Entrega 3"
 ---
 
 ```{r setup}
-source("rdocs/source/consultor4.R")
+#| include: false
+source("rdocs/entrega_3.R")
 ```
 
 ```{r}
@@ -19,15 +20,18 @@ library(tinytex)
 tinytex::install_tinytex()
 ```
 
+
+
+
 # Objetivo
 
 Esse template foi criado para o alocado conseguir observar como ficaria sua análise o arquivo principal. É daqui que o gerente de projetos irá copiar a análise e inserir no documento principal que gerará o relatório estatístico.
 
 # Análises
 
-## Análise 7
+## Análise 5
 
-## Análise 8
+## Análise 6
 
 ```{r}
 #| label: fig-

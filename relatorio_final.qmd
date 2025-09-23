@@ -7,7 +7,7 @@ output-file: titulo do projeto
 
 ```{r}
 #| include: false
-source("rdocs/source/packages.R")
+source("rdocs/packages.R")
 ```
 
 # Introdução

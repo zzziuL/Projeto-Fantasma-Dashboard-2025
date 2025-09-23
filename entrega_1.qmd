@@ -1,10 +1,11 @@
 ---
 # Nome do arquivo PDF gerado na pasta resultado
-output-file: "Nome do alocado - análise 1 e 2"
+output-file: "Entrega 1"
 ---
 
 ```{r setup}
-source("rdocs/consultor1.R")
+#| include: false
+source("rdocs/entrega_1.R")
 ```
 
 ```{r}
