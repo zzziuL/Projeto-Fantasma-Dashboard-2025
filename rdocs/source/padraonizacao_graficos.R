@@ -256,7 +256,7 @@ ggplot(mpg) +
   geom_boxplot(fill = c("#A11D21"), width = 0.5) +
   guides(fill = FALSE) +
   stat_summary(
-    fun = "mean", geom = "point", shape = 23, size = 3, fill = "white"
+    fun = "mean", geom = "point", shape = 23, size = 3, fill = "grey"
   ) +
   labs(x = "", y = "Consumo em Cidade (milhas/galão)") +
   theme_estat()
@@ -270,7 +270,7 @@ ggplot(mpg) +
   ) +
   geom_boxplot(fill = c("#A11D21"), width = 0.5) +
   stat_summary(
-    fun = "mean", geom = "point", shape = 23, size = 3, fill = "white"
+    fun = "mean", geom = "point", shape = 23, size = 3, fill = "grey"
   ) +
   labs(x = "Transmissão", y = "Consumo em Cidade (milhas/galão)") +
   theme_estat()
