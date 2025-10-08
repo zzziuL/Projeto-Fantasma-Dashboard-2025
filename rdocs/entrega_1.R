@@ -22,3 +22,31 @@ source("rdocs/source/packages.R")
 # de teste depreciados, ou ao menos deixando como comentário. Dê preferência
 # as funções dos pacotes contidos no Tidyverse para realizar suas análises.
 # ---------------------------------------------------------------------------- #
+
+##Análise 1
+
+##código pra limpar o banco
+
+library(tidyverse)
+
+
+
+g1 <- ggplot(mpg) +
+  aes(x = class) +
+  geom_bar(fill = "#A11D21") +
+  labs(x = "Classe do automóvel", y = "Frequência") +
+  theme_estat()
+
+print_quadro_resumo(variavel)
+
+
+
+
+
+
+
+
+
+
+
+

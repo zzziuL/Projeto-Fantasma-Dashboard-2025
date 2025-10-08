@@ -1,6 +1,6 @@
 ---
 # Nome do arquivo PDF gerado na pasta resultado
-output-file: "Entrega 1"
+output-file: "Entrega 1 - Gustavo"
 ---
 
 ```{r setup}
@@ -8,73 +8,18 @@ output-file: "Entrega 1"
 source("rdocs/entrega_1.R")
 ```
 
-```{r}
-# Rodar apenas uma vez na vida!
-## Instalando o tinytex(pacote apenas)
-### CRAN version
-install.packages('tinytex')
-
-
-## Baixando o tinytex
-library(tinytex)
-tinytex::install_tinytex()
-```
-
-# Objetivo
-
-Esse template foi criado para o alocado conseguir observar como ficaria sua análise o arquivo principal. É daqui que o gerente de projetos irá copiar a análise e inserir no documento principal que gerará o relatório estatístico.
-
 # Análises
 
-## Análise 1
+## Análise tal
 
-## Análise 2
+Introdução da análise
 
 ```{r}
-#| label: fig-
-#| fig-cap: "Gráfico "
-
-
-
+#| label: fig-g1
+#| fig-cap: "Gráfico de barras teste "
+g1
 ```
 
-
-::: {#quad- layout-align="center" quad-pos="H"}
-```{=latex}
-
-
-
-```
-
-Medidas resumo da 
-:::
-
-
-
-::: {#tbl-modalidades layout-align="center" tbl-pos="H"}
-```{=latex}
-
-
-```
-
-
-:::
-
-
-
-
-$\ref{fig-}$
-
-[@tbl-]
-
-
-[**Quadro** @quad-]
-
-
-
-
-
-
-
+descritiva $\ref{fig-g1}$ volta pra figura
 
 
