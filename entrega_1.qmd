@@ -8,68 +8,72 @@ output-file: "Entrega 1"
 source("rdocs/entrega_1.R")
 ```
 
-```{r}
-# Rodar apenas uma vez na vida!
-## Instalando o tinytex(pacote apenas)
-### CRAN version
-install.packages('tinytex')
+## Objetivo
 
+Essa análise tem como objetivo mostrar ao cliente a receita média das lojas registradas, nos anos de 1880 até 1889, para que ele possa entender sobre as variações da quantidade de receita média anual produzida ao longo do tempo.
 
-## Baixando o tinytex
-library(tinytex)
-tinytex::install_tinytex()
-```
-
-# Objetivo
-
-Esse template foi criado para o alocado conseguir observar como ficaria sua análise o arquivo principal. É daqui que o gerente de projetos irá copiar a análise e inserir no documento principal que gerará o relatório estatístico.
-
-# Análises
-
-## Análise 1
-
-## Análise 2
+## Análise 
 
 ```{r}
-#| label: fig-
-#| fig-cap: "Gráfico "
+#| label: fig-linha
+#| fig-cap: "Gráfico de linha do ano pela receita media"
 
 
-
+linha
 ```
 
 
-::: {#quad- layout-align="center" quad-pos="H"}
+::: {#quad-quadro_resumo1 layout-align="center" quad-pos="H"}
 ```{=latex}
-
-
-
+	\begin{tabular} { | l |
+			S[table-format = 2.2]
+			|}
+	\hline
+		\textbf{Estatística} & \textbf{Valor} \\
+		\hline
+		Média & 1135,15 \\
+		Desvio Padrão & 33,31 \\
+		Variância & 1109,79 \\
+		Mínimo & 1099,19 \\
+		1º Quartil & 1111,75 \\
+		Mediana & 1120,97 \\
+		3º Quartil & 1162,13 \\
+		Máximo & 1196,21 \\
+	\hline
+	\end{tabular}
 ```
 
-Medidas resumo da 
+Medidas resumo da da Receita media anual
 :::
+
 
 
 
 ::: {#tbl-modalidades layout-align="center" tbl-pos="H"}
 ```{=latex}
-
-
+	\begin{tabular} { | l |
+			S[table-format = 2.2]
+			|}
+	\hline
+		\textbf{Estatística} & \textbf{Valor} \\
+		\hline
+		Média & 1135,15 \\
+		Desvio Padrão & 33,31 \\
+		Variância & 1109,79 \\
+		Mínimo & 1099,19 \\
+		1º Quartil & 1111,75 \\
+		Mediana & 1120,97 \\
+		3º Quartil & 1162,13 \\
+		Máximo & 1196,21 \\
+	\hline
+	\end{tabular}
 ```
 
 
 :::
 
 
-
-
-$\ref{fig-}$
-
-[@tbl-]
-
-
-[**Quadro** @quad-]
-
+Através da $\ref{fig-linha}$ foi possível verificar que as receitas variaram muito ao longo dos anos, tendo seu maior valor em 1880 e o menor em 1882. Pelo [**Quadro** @quad-quadro_resumo1] e [@tbl-modalidades], nota-se que os dados estão em grande parte perto da média, indicando pouca variação entre os pontos, o que pode ser verificado pela pequena variação entre o valor mãximo e o mínimo, além disso observa-se que essas variações são estaveis pois possuem um baixo desvio padrão, sendo relativamente previsiveis.
 
 
 
