@@ -75,10 +75,3 @@ Medidas resumo da da Receita media anual
 
 Através da $\ref{fig-linha}$ foi possível verificar que as receitas variaram muito ao longo dos anos, tendo seu maior valor em 1880 e o menor em 1882. Pelo [**Quadro** @quad-quadro_resumo1] e [@tbl-modalidades], nota-se que os dados estão em grande parte perto da média, indicando pouca variação entre os pontos, o que pode ser verificado pela pequena variação entre o valor mãximo e o mínimo, além disso observa-se que essas variações são estaveis pois possuem um baixo desvio padrão, sendo relativamente previsiveis.
 
-
-
-
-
-
-
-
