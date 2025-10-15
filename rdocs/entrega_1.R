@@ -23,7 +23,6 @@ source("rdocs/source/packages.R")
 # as funções dos pacotes contidos no Tidyverse para realizar suas análises.
 # ---------------------------------------------------------------------------- #
 
-HEAD
 #Carregando as pastas
 
 relatoriovendas <- read_xlsx("relatorio_old_town_road.xlsx",
@@ -57,7 +56,7 @@ dados1 <- dados1 %>%
 #Calculando a média
 media <- dados1 %>%
   group_by(Ano) %>%
-  summarise(media_anual = mean(Receita, na.rm = TRUE))
+  summarise(media_anual = sum(Receita)/18)
 
 #Transformando em Real
 media$media_anual <- media$media_anual * 5.31
@@ -76,22 +75,6 @@ linha <- ggplot(media) +
 
 #Quadro
 print_quadro_resumo(media, media_anual)
-
-##Análise 1
-
-##código pra limpar o banco
-
-library(tidyverse)
-
-
-
-g1 <- ggplot(mpg) +
-  aes(x = class) +
-  geom_bar(fill = "#A11D21") +
-  labs(x = "Classe do automóvel", y = "Frequência") +
-  theme_estat()
-
-print_quadro_resumo(variavel)
 
 
 
