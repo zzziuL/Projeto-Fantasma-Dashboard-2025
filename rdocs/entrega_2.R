@@ -22,3 +22,25 @@ source("rdocs/source/packages.R")
 # de teste depreciados, ou ao menos deixando como comentário. Dê preferência
 # as funções dos pacotes contidos no Tidyverse para realizar suas análises.
 # ---------------------------------------------------------------------------- #
+
+#Carregando a pasta
+
+infosclientes <- read_xlsx("relatorio_old_town_road.xlsx",
+                             sheet = "infos_clientes")
+
+#Transformando peso e altura
+infosclientes$Weight_lbs <- infosclientes$Weight_lbs * 0.453592
+infosclientes$Height_dm <- infosclientes$Height_dm * 10
+
+#Grafico dispersao
+dispersao <- ggplot(infosclientes, aes(x = Height_dm, y = Weight_lbs)) +
+  geom_point(
+    colour = "#A11D21",
+    size = 3,
+    alpha = 0.3
+  ) +
+  labs(
+    x = "Altura (cm)",
+    y = "Peso (Kg)"
+  ) +
+  theme_estat()

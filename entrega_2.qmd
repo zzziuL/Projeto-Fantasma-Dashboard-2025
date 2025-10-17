@@ -8,68 +8,23 @@ output-file: "Entrega 2"
 source("rdocs/entrega_2.R")
 ```
 
+# Introdução
+
+Essa análise tem como objetivo ajudar a entender a relação entre o peso e a altura dos clientes que compram nas empresas da Old Town Road.Ltda.
+
+# Análise das variáveis peso e altura dos clientes
 
 ```{r}
-# Rodar apenas uma vez na vida!
-## Instalando o tinytex(pacote apenas)
-### CRAN version
-install.packages('tinytex')
+#| label: fig-dispersao
+#| fig-cap: "Gráfico de Dispersão da altura pelo peso"
 
 
-## Baixando o tinytex
-library(tinytex)
-tinytex::install_tinytex()
-```
-
-# Objetivo
-
-Esse template foi criado para o alocado conseguir observar como ficaria sua análise o arquivo principal. É daqui que o gerente de projetos irá copiar a análise e inserir no documento principal que gerará o relatório estatístico.
-
-# Análises
-
-## Análise 3
-
-## Análise 4
-
-```{r}
-#| label: fig-
-#| fig-cap: "Gráfico "
-
-
-
+dispersao
 ```
 
 
-::: {#quad- layout-align="center" quad-pos="H"}
-```{=latex}
+Através da $\ref{fig-dispersao}$ observa-se que na maioria dos casos a medida que o peso aumenta a altura cresce, visto que ao pegar pontos mais altos em peso, eles corresponderão a alturas maiores. Logo também é possível afirmar de forma contraria que à medida que a altura aumenta, o peso tende a aumentar.
 
-
-
-```
-
-Medidas resumo da 
-:::
-
-
-
-::: {#tbl-modalidades layout-align="center" tbl-pos="H"}
-```{=latex}
-
-
-```
-
-
-:::
-
-
-
-
-$\ref{fig-}$
-
-[@tbl-]
-
-
-[**Quadro** @quad-]
 
 
 
