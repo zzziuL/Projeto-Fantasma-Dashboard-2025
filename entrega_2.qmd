@@ -10,7 +10,7 @@ source("rdocs/entrega_2.R")
 
 # Introdução
 
-Essa análise tem como objetivo ajudar a entender a relação entre o peso e a altura dos clientes que compram nas empresas da Old Town Road.Ltda.
+Essa análise estatística tem o intuito de ajuda a entender a relação entre as variáveis peso e a altura dos clientes que compram nas empresas da Old Town Road.Ltda. Com o objetivo de aprofundar o entendimento sobre o perfil dos seus consumidores.
 
 # Análise das variáveis peso e altura dos clientes
 
@@ -23,7 +23,58 @@ dispersao
 ```
 
 
-Através da $\ref{fig-dispersao}$ observa-se que na maioria dos casos a medida que o peso aumenta a altura cresce, visto que ao pegar pontos mais altos em peso, eles corresponderão a alturas maiores. Logo também é possível afirmar de forma contraria que à medida que a altura aumenta, o peso tende a aumentar.
+::: {#quad-quadro_resumo1 layout-align="center" quad-pos="H"}
+```{=latex}
+\begin{tabular} { | l |
+			S[table-format = 2.2]
+			|}
+	\hline
+		\textbf{Estatística} & \textbf{Valor} \\
+		\hline
+		Média & 75,19 \\
+		Desvio Padrão & 11,92 \\
+		Variância & 142 \\
+		Mínimo & 45 \\
+		1º Quartil & 66,9 \\
+		Mediana & 75,3 \\
+		3º Quartil & 83,2 \\
+		Máximo & 119,3 \\
+	\hline
+	\end{tabular}
+```
+
+Medidas resumo da variável peso
+:::
+
+
+
+::: {#tbl-modalidadesaltura layout-align="center" tbl-pos="H"}
+```{=latex}
+\begin{tabular} { | l |
+			S[table-format = 1.2]
+			|}
+	\hline
+		\textbf{Estatística} & \textbf{Valor} \\
+		\hline
+		Média & 171,48 \\
+		Desvio Padrão & 9,87 \\
+		Variância & 97,38 \\
+		Mínimo & 150 \\
+		1º Quartil & 164,8 \\
+		Mediana & 171,75 \\
+		3º Quartil & 178 \\
+		Máximo & 200 \\
+	\hline
+	\end{tabular}
+```
+
+Medidas resumo da variável altura
+:::
+
+
+Através da $\ref{fig-dispersao}$ observa-se que na maioria dos casos a medida que o peso aumenta a altura cresce, visto que ao pegar pontos mais altos em peso, eles corresponderão a alturas maiores.   
+Ao analisar o [**Quadro** @quad-quadro_resumo1] foi possível observar uma boa variação na variável peso, visto que seus pontos máximo e mínimo correspondem a respectivamente, 119,30Kg e 45Kg, possuindo uma média de 75,19Kg e um devio padrão de 11,92.   
+Já na [@tbl-modalidadesaltura], percebemos que a váriavel altura possui um desvio padrão menor que a apresentada anteriormente, refletindo nos valores, visto que possui uma distância menor entre o mínimo e o máximo, mostrando uma maior homogeneidade da variável.
 
 
 

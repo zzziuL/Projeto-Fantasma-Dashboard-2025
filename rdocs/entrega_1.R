@@ -74,7 +74,8 @@ linha <- ggplot(media) +
   theme_estat()
 
 #Quadro
-print_quadro_resumo(media, media_anual)
+media %>%
+  print_quadro_resumo(var_name = media_anual)
 
 
 
