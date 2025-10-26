@@ -8,72 +8,165 @@ output-file: "Entrega 3"
 source("rdocs/entrega_3.R")
 ```
 
-```{r}
-# Rodar apenas uma vez na vida!
-## Instalando o tinytex(pacote apenas)
-### CRAN version
-install.packages('tinytex')
+# Introdução
 
+Esse relatório tem o intuito de descobrir a idade dos clientes das lojas da Old Town Road.Ltda, na cidade de Âmbar Seco.   
+Para essa análise utilizamos os dados fornecidos pela Old Town Road.Ltda, utilizamos as varíaveis de Idade e Lojas.
 
-## Baixando o tinytex
-library(tinytex)
-tinytex::install_tinytex()
-```
+# Referencial Teórico
+## Média
 
+A média é a soma das observações dividida pelo número total delas, dada pela fórmula:
 
+$$\bar{X}=\frac{\sum\limits_{i=1}^{n}X_i}{n}$$
 
+Com:
 
-# Objetivo
+-   $i = 1, \, 2, \, ..., \, n$
 
-Esse template foi criado para o alocado conseguir observar como ficaria sua análise o arquivo principal. É daqui que o gerente de projetos irá copiar a análise e inserir no documento principal que gerará o relatório estatístico.
+-   $n =$ número total de observações
+
+## Mediana
+
+Sejam as $n$ observações de um conjunto de dados $X=X_{(1)},X_{(2)},\ldots, X_{(n)}$ de determinada variável ordenadas de forma crescente. A mediana do conjunto de dados $X$ é o valor que deixa metade das observações abaixo dela e metade dos dados acima.
+
+Com isso, pode-se calcular a mediana da seguinte forma:
+
+$$
+med(X) =
+    \begin{cases}
+         X_{\frac{n+1}{2}}, \textrm{para n ímpar} \\
+         \frac{X_{\frac{n}{2}}+X_{\frac{n}{2} + 1}}{2}, \textrm{para n par} \\
+    \end{cases}
+$$
+
+## Quartis
+
+Os quartis são separatrizes que dividem o conjunto de dados em quatro partes iguais. O primeiro quartil (ou inferior) delimita os 25% menores valores, o segundo representa a mediana, e o terceiro delimita os 25% maiores valores. Inicialmente deve-se calcular a posição do quartil:
+
+-   Posição do primeiro quartil $P_1$: $$P_1=\frac{n+1}{4}$$
+
+-   Posição da mediana (segundo quartil) $P_2$: $$P_2 = \frac{n+1}{2}$$
+
+-   Posição do terceiro quartil $P_3$: $$P_3=\frac{3 \times (n+1)}{4}$$
+
+Com $n$ sendo o tamanho da amostra. Dessa forma, $X_{\left( P_i \right)}$ é o valor do $i$-ésimo quartil, onde $X_{\left( j \right)}$ representa a $j$-ésima observação dos dados ordenados.
+
+Se o cálculo da posição resultar em uma fração, deve-se fazer a média entre o valor que está na posição do inteiro anterior e do seguinte ao da posição.
+
+## Variância
+
+A variância é uma medida que avalia o quanto os dados estão dispersos em relação à média, em uma escala ao quadrado da escala dos dados.
+
+### Variância Populacional
+
+Para uma população, a variância é dada por:
+
+$$\sigma^2=\frac{\sum\limits_{i=1}^{N}\left(X_i - \mu\right)^2}{N}$$
+
+Com:
+
+-   $X_i =$ $i$-ésima observação da população
+
+-   $\mu =$ média populacional
+
+-   $N =$ tamanho da população
+
+### Variância Amostral
+
+Para uma amostra, a variância é dada por:
+
+$$S^2=\frac{\sum\limits_{i=1}^{n}\left(X_i - \bar{X}\right)^2}{n-1}$$
+
+Com:
+
+-   $X_i =$ i-ésima observação da amostra
+
+-   $\bar{X} =$ média amostral
+
+-   $n =$ tamanho da amostra
+
+## Desvio Padrão
+
+O desvio padrão é a raiz quadrada da variância. Ele avalia o quanto os dados estão dispersos em relação à média.
+
+### Desvio Padrão Populacional
+
+Para uma população, o desvio padrão é dado por:
+
+$$\sigma=\sqrt{\frac{\sum\limits_{i=1}^{N}\left(X_i - \mu\right)^2}{N}}$$
+
+Com:
+
+-   $X_i =$ i-ésima observação da população
+
+-   $\mu =$ média populacional
+
+-   $N =$ tamanho da população
+
+### Desvio Padrão Amostral
+
+Para uma amostra, o desvio padrão é dado por:
+
+$$S=\sqrt{\frac{\sum\limits_{i=1}^{n}\left(X_i - \bar{X}\right)^2}{n-1}}$$
+
+Com:
+
+-   $X_i =$ i-ésima observação da amostra
+
+-   $\bar{X} =$ média amostral
+
+-   $n =$ tamanho da amostra
+
+## Boxplot
+
+O boxplot é uma representação gráfica na qual se pode perceber de forma mais clara como os dados estão distribuídos. A figura abaixo ilustra um exemplo de boxplot.
+
+![Exemplo de boxplot](images/box_uni.png){fig-align="center"}
+
+A porção inferior do retângulo diz respeito ao primeiro quartil, enquanto a superior indica o terceiro quartil. Já o traço no interior do retângulo representa a mediana do conjunto de dados, ou seja, o valor em que o conjunto de dados é dividido em dois subconjuntos de mesmo tamanho. A média é representada pelo losango branco e os pontos são *outliers*. Os *outliers* são valores discrepantes da série de dados, ou seja, valores que não demonstram a realidade de um conjunto de dados.
 
 # Análises
 
-## Análise 5
-
-## Análise 6
+## Análise da variável idade pelas lojas de Âmbar Seco
 
 ```{r}
-#| label: fig-
-#| fig-cap: "Gráfico "
+#| label: fig-bp
+#| fig-cap: "Boxplot das lojas pelas idades"
 
 
-
+bp
 ```
 
 
-::: {#quad- layout-align="center" quad-pos="H"}
+::: {#quad-idade layout-align="center" quad-pos="H"}
 ```{=latex}
-
-
+\begin{tabular} { | l |
+			S[table-format = 2.2]
+			S[table-format = 2.2]
+			S[table-format = 3.2]
+			S[table-format = 2.2]
+			|}
+	\hline
+		\textbf{Estatística} & \textbf{Banco Careca} & \textbf{Vendinha Rápida} & \textbf{Saloon} & \textbf{Ferraria Seca} \\
+		\hline
+		Média & 34,92 & 40,35 & 34,2 & 33,67 \\
+		Desvio Padrão & 5,57 & 6,03 & 12,7 & 13,31 \\
+		Variância & 31,06 & 36,39 & 161,23 & 177,18 \\
+		Mínimo & 25 & 30 & 15 & 16 \\
+		1º Quartil & 31 & 35 & 26 & 24 \\
+		Mediana & 34 & 41 & 32,5 & 30,5 \\
+		3º Quartil & 40 & 46 & 38 & 39 \\
+		Máximo & 44 & 49 & 77 & 80 \\
+	\hline
+	\end{tabular}
 
 ```
 
-Medidas resumo da 
+Medidas resumo das Idades
 :::
 
+# Conclusão
 
-
-::: {#tbl-modalidades layout-align="center" tbl-pos="H"}
-```{=latex}
-
-
-```
-
-
-:::
-
-
-
-
-$\ref{fig-}$
-
-[@tbl-]
-
-
-[**Quadro** @quad-]
-
-
-
-
-
+Fazendo a análise do $\ref{fig-bp}$ é possível afirmar que a loja Vendinha Rápida é a que possui o público mais velho, já as lojas Saloon e Ferraria Seca são as lojas com maior diversidade, conseguindo atrair público jovem e sênior, enquanto a loja Banco Careca tem um público bem definido de meia-idade.   
+Observando os valores do [**Quadro** @quad-idade] podemos tirar melhores conclusões, visto que observa-se pelos valores que Vendinha Rápida e Banco Careca possuem clientes com idades bem definidas. Já nas outras duas lojas, foi possível analisar uma grande quantidade de outliers, mostrando que ambas as lojas também atraem um público mais velho, sendo possível visualizar também pelos altos devios padrão, puxando as medianas para cima.

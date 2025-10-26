@@ -371,6 +371,7 @@ O teste de hipóteses tem como objetivo fornecer uma metodologia para verificar 
 ```{=latex}
 \hipoteses{hipótese a ser testada (chamada de hipótese nula)}{hipótese alternativa que será aceita caso a hipótese nula seja rejeitada}
 ```
+
 Essa decisão é tomada por meio da construção de uma região crítica, ou seja, região de rejeição do teste.
 
 ## Tipos de teste: bilateral e unilateral
@@ -428,6 +429,7 @@ O **Teste de Shapiro-Wilk** é utilizado para verificar a aderência de uma vari
 ```{=latex}
 \hipoteses{A variável segue uma distribuição Normal}{A variável segue outro modelo}
 ```
+
 A amostra deve ser ordenada de forma crescente para que seja possível obter as estatísticas de ordem. A estatística do teste é dada por:
 
 $$ W = \frac{1}{D} \left[ \sum_{i=1}^{k} a_{i} \left(X_{(n-i+1)} - X_{(i)}\right) \right] $$
@@ -453,6 +455,7 @@ O teste possui as seguintes hipóteses:
 \hipoteses{A variável segue o modelo proposto}{A variável segue outro modelo}
 \end{center}
 ```
+
 Se a hipótese nula é verdadeira, espera-se que as diferenças entre $F_0(x)$ e $S_n(x)$ sejam pequenas e estejam dentro dos limites dos erros aleatórios. O teste de Kolmogorov-Smirnov focaliza a maior dessas diferenças. No caso do teste de normalidade de Kolmogorov-Smirnov, a função de distribuição acumulada teórica $F_0(x)$ é a função de distribuição acumulada da normal, com média e variância estimadas pela amostra. Este teste é mais recomendado para amostras grandes sem *outliers*.
 
 ## Teste de Normalidade de Lilliefors
@@ -470,6 +473,7 @@ O teste possui as seguintes hipóteses:
 \hipoteses{A variável segue o modelo proposto}{A variável segue outro modelo}
 \end{center}
 ```
+
 Se a hipótese nula é verdadeira, espera-se que as diferenças entre $F_0(x)$ e $S_n(x)$ sejam pequenas e estejam dentro dos limites dos erros aleatórios.
 
 ## Teste de Normalidade de Anderson-Darling
@@ -481,6 +485,7 @@ O **teste de Normalidade de Anderson-Darling** é utilizado para verificar se um
 \hipoteses{A variável segue uma distribuição Normal}{A variável segue outro modelo}
 \end{center}
 ```
+
 Se a hipótese nula for verdadeira, espera-se que o p-valor esteja acima do nível de significância $\alpha$.
 
 # Teste de Homogeneidade de Variância
@@ -512,6 +517,7 @@ As hipóteses do teste são:
 ```{=latex}
 \hipoteses{Todas as populações possuem mesma variância}{Ao menos uma população possui variância diferente das demais}
 ```
+
 Sob $H_0$, rejeita-se a hipótese nula de igualdade de variâncias das $k$ populações a um nível $\alpha$ de significância se a estatística do teste assumir valor superior ao quantil crítico respectivo da distribuição Qui-Quadrado com $k-1$ graus de liberdade.
 
 ## Teste de Homogeneidade de Variância de Breusch-Pagan
@@ -538,6 +544,7 @@ O teste possui as seguintes hipóteses:
 ```{=latex}
 \hipoteses{As variâncias dos erros são iguais}{As variâncias dos erros são diferentes e função multiplicativa de outras variáveis}
 ```
+
 Sob $H_0$, rejeita-se a hipótese nula de igualdade de variâncias dos erros a um nível $\alpha$ de significância se a estatística do teste assumir valor superior ao quantil crítico respectivo da distribuição Qui-Quadrado com $1$ grau de liberdade.
 
 ## Teste de Homogeneidade de Variância de Levene
@@ -561,6 +568,7 @@ Com isso, tem-se a estatística do teste:
 F^* = \frac{\displaystyle \sum_{i=1}^{k}\frac{n_i(\bar{z}_{i.} - \bar{z}_{..})^2}{(k-1)}}{\frac{\displaystyle \sum_{i=1}^{k}\displaystyle \sum_{j=1}^{n_i}(z_{ij}-\bar{z}_{i.}^2)}{\displaystyle \sum_{i=1}^{k}(n_i-1)}} \nonumber
 \end{equation}
 ```
+
 Sendo que:
 
 $$ \bar{z}_{i.} = \sum_{i=1}^{k}\frac{z_{ij}}{n_{i}} $$
@@ -574,6 +582,7 @@ Após a transformação dos dados originais, aplica-se o teste da ANOVA nos dado
 ```{=latex}
 \hipoteses{Todas as populações possuem mesma variância}{Ao menos uma população possui variância diferente das demais}
 ```
+
 Sob $H_0$, rejeita-se a hipótese nula de igualdade de variâncias a um nível $\alpha$ de significância se a estatística do teste $F^*$ assumir valor superior ao quantil crítico respectivo da distribuição $F(k,N-k-1)$.
 
 ## Teste F de Igualdade de Variância
@@ -589,6 +598,7 @@ Testa-se as seguintes hipóteses:
 ```{=latex}
 \hipoteses{$X$ e $Y$ possuem mesma variância populacional}{$X$ e $Y$ não possuem mesma variância populacional}
 ```
+
 Caso os valores de $S^2_X$ e $S^2_Y$ sejam próximos, é esperado que o valor da estatística do teste esteja próximo de um e, assim, não deve-se rejeitar $H_0$. Caso esses valores estejam distantes, a estatística do teste se distanciará de um, levando à rejeição da hipótese nula de variâncias iguais.
 
 ## Teste de Variância Constante de White
@@ -600,6 +610,7 @@ As hipóteses do teste são:
 ```{=latex}
 \hipoteses{Variância é constante}{Variância não é constante}
 ```
+
 ## Teste de Homogeneidade de Variância de Brown-Forsythe
 
 O **teste de Brown-Forsythe** é um teste utilizado para verificar se a variância dos erros de um modelo de regressão linear simples é constante para diferentes valores da variável explicativa $X$. É uma modificação do teste de Levene, dessa forma, não depende da normalidade dos erros do modelo. Isto é, ele é um teste robusto para afastamentos sérios da normalidade dos erros. O tamanho da amostra deve ser suficientemente grande de modo que a dependência entre os resíduos possa ser ignorada.
@@ -609,6 +620,7 @@ As hipóteses do teste são:
 ```{=latex}
 \hipoteses{A variância dos erros é constante}{A variância dos erros não é constante}
 ```
+
 O primeiro passo é dividir a amostra $X_1, X_2, \ldots, X_n$ em dois grupos de acordo com os níveis da variável explicativa $X$:
 
 -   O grupo 1 é formado pelas observações de $X$ com nível baixo: $e_{i1}$ é o i-ésimo resíduo do grupo 1, $i = 1, \ldots, n_1$.
@@ -639,6 +651,7 @@ As hipóteses do teste são:
 ```{=latex}
 \hipoteses{$\mu_D = 0$}{$\mu_D \neq 0$}
 ```
+
 Em que $\mu_D$ é a média populacional das diferenças e é obtida por $\mu_D = \mu_X - \mu_Y$, sendo $\mu_X$ e $\mu_Y$ as médias correspondentes às populações de $X$ e $Y$, respectivamente. Ou seja, está-se testando se a média da diferença é 0 ou não.
 
 Os parâmetros $\mu_D$ e $\sigma_D^2$ são estimados pela média e variância amostrais:
@@ -660,6 +673,7 @@ Considere observações pareadas ${(X_1, Y_1), \ldots, (X_n, Y_n)}$. Existe inte
 ```{=latex}
 \hipoteses{$D$ segue uma distribuição simétrica em torno de zero}{$D$ não segue uma distribuição simétrica em torno de zero}
 ```
+
 O teste é feito a partir da ordenação da variável $D_i$ e postos (ou ranks) são atribuídos a cada observação. Algumas observações podem receber a mesma posição na ordenação. Esse fenômeno é denominado empate. Os postos são calculados da seguinte maneira:
 
 $$R_i =
@@ -685,6 +699,7 @@ Considere duas amostras independentes $(x_1, \ldots, x_n)$ e $(y_1, \ldots, y_m)
 ```{=latex}
 \hipoteses{$\mu_X=\mu_Y$}{$\mu_X \neq \mu_Y$}
 ```
+
 Sendo $\mu_X$ e $\mu_Y$ as médias correspondentes às populações de $X$ e $Y$, respectivamente. Os parâmetros $\mu_X$ e $\mu_Y$ são estimados pelas médias amostrais:
 
 $$
@@ -713,6 +728,7 @@ Considere duas amostras independentes $x_1, \ldots, x_n$ e $y_1, \ldots, y_m$. E
 ```{=latex}
 \hipoteses{$\mu_X=\mu_Y$}{$\mu_X \neq \mu_Y$}
 ```
+
 Sendo $\mu_X$ e $\mu_Y$ as médias correspondentes às populações de $X$ e $Y$, respectivamente. Os parâmetros $\mu_X$ e $\mu_Y$ são estimados pelas médias amostrais:
 
 $$
@@ -758,6 +774,7 @@ Considere duas amostras independentes $(x_1,\, \ldots , \, x_n)$ e $(y_1,\, \ldo
 ```{=latex}
 \hipoteses{$\mu_X=\mu_Y$}{$\mu_X \neq \mu_Y$}
 ```
+
 Sendo $\mu_X$ e $\mu_Y$ as médias correspondentes às populações de $X$ e $Y$, respectivamente. Os parâmetros $\mu_X$ e $\mu_Y$ são estimados pelas médias amostrais:
 
 $$
@@ -842,6 +859,7 @@ Com:
 
 \end{itemize}
 ```
+
 ## Análise de Variância (ANOVA)
 
 A Análise de Variância, mais conhecida por ANOVA, consiste em um teste de hipótese, em que é testado se as médias dos tratamentos (ou grupos) são iguais. Os dados são descritos pelo seguinte modelo:
@@ -868,6 +886,7 @@ A variabilidade total pode ser decomposta na variabilidade devida aos diferentes
 &+ \text{Soma de Quadrados de Resíduos (SQRES)}
 \end{align*}
 ```
+
 Sendo o estudo não balanceado, ou seja, quando os tratamentos possuem tamanhos de amostra distintos:
 
 $$
@@ -897,6 +916,7 @@ As hipóteses do teste são:
 ```{=latex}
 \hipoteses{As médias dos \textit{a} tratamentos são iguais}{Existe pelo menos um par de médias diferente}
 ```
+
 A estatística do teste é composta pelo Quadrado Médio de Tratamento (QMTRAT) e Quadrado Médio de Resíduos (QMRES), sendo a definição de Quadrado Médio a divisão da Soma de Quadrados pelos seus graus de liberdade. Por conta da suposição de Normalidade dos erros no modelo, a estatística do teste, $F$, tem distribuição F de Snedecor com $(a - 1)$ e $(\sum_{i=1}^a n_i - a)$ graus de liberdade.
 
 $$
@@ -923,6 +943,7 @@ A hipótese nula é rejeitada caso o p-valor seja menor que o nível de signific
 \label{tab:anova}
 \end{table}
 ```
+
 ## Teste de Fisher LSD
 
 Após a rejeição da hipótese nula da Análise de Variância (ANOVA), deve-se identificar quais médias diferem. Para isso, é utilizado o teste de Fisher LSD, tendo como objetivo comparar as médias duas a duas. Consiste em realizar múltiplos testes t de comparação de médias, cada um com nível de significância $\alpha$. As hipóteses são:
@@ -930,6 +951,7 @@ Após a rejeição da hipótese nula da Análise de Variância (ANOVA), deve-se 
 ```{=latex}
 \hipoteses{$\mu_i=\mu_j$}{$\mu_i \neq \mu_j$}
 ```
+
 A estatística do teste é dada por:
 
 $$T = t_{(\alpha/2; \: GL_{res})}\sqrt{\left(\frac{1}{n}+\frac{1}{m}\right)QM_{res}}$$
@@ -1191,6 +1213,7 @@ Para a realização do teste, uma tabela 2x2 é feita que auxilia a testar a sig
 \end{tabular}
 \end{table}
 ```
+
 Por meio dessa tabela, verifica-se que o número total de elementos que tiveram alguma mudança é a soma das células B e C. Então, essas são as células de interesse do teste.
 
 As hipóteses podem ser escritas como:
@@ -1237,6 +1260,7 @@ A estatística $T$ do teste, considerando $H_{0}$ verdadeira, tem distribuição
     \item [\bf b)] \textbf{Aproximada}, para grandes amostras, para a distribuição Qui-Quadrado com 1 grau de liberdade se o teste for bilateral, ou distribuição Normal se o teste for unilateral.
 \end{itemize}
 ```
+
 ## Teste de Correlação de Pearson
 
 O coeficiente de correlação linear de Pearson indica a força e a direção do relacionamento linear entre duas variáveis quantitativas. É um índice adimensional com valores situados entre -1 e 1, no qual o valor -1 representa total correlação linear negativa entre as variáveis (quando o valor de uma variável cresce, o valor da outra diminui) e o valor 1 representa total correlação linear positiva entre elas (ambas crescem simultaneamente). Esse coeficiente é obtido por meio da fórmula:
@@ -1355,6 +1379,7 @@ Para realizar a comparação dos pares e concluir se serão concordantes ou disc
     \item Se $X_{j} = X_{i}$, não há comparação
 \end{itemize}
 ```
+
 ## Correlação Parcial de Kendall
 
 Em alguns casos, quando se observa a correlação entre duas variáveis, há possibilidade de que essa relação ocorra devido à associação de cada uma dessas variáveis com uma terceira. Na correlação parcial, os efeitos desta terceira variável ($Z$) sobre as outras duas variáveis ($X$ e $Y$) são controlados, mantendo-a constante.
@@ -1392,6 +1417,7 @@ Para o cálculo desse coeficiente, comparam-se os postos atribuídos às observa
     \item Se $X$ e $Y$ forem discordantes, então a frequência é atribuída à célula $D =$ (-, -)
 \end{itemize}
 ```
+
 Portanto, o coeficiente de correlação parcial por postos de Kendall entre duas variáveis, considerando uma terceira variável como constante, é dado por:
 
 $$ \tau_{XY, Z} = \frac{AD - BC}{\sqrt{(A + D)(C + D)(A + C)(B + D)}} $$
@@ -1488,6 +1514,7 @@ $$IC(\hat{RC})_{95\%}=exp\{log(\hat{RC})\pm z_{(\alpha/2)}\times\sqrt{\hat{Var}(
 
 \par Caso o intervalo de confiança de 95\% de probabilidade não inclua o valor 1, conclui-se que a chance de ocorrência do evento é estatisticamente diferente entre os grupos, com 5\% de significância.
 ```
+
 ## Risco Relativo
 
 ```{=latex}
@@ -1812,6 +1839,7 @@ Considere a seguinte tabela:
 \end{tabular}
 \end{table}
 ```
+
 onde $a$ é a frequência do par (1,1), $b$ representa o par (1,0), e assim por diante. Pela tabela, podem-se desenvolver os coeficientes de similaridade:
 
 **I) Concordância simples:**
@@ -2069,33 +2097,33 @@ Seja uma amostra original $X = \{x_1, \, x_2, \, \ldots, \, x_n\}$ e a estatíst
 
 # Curva ROC
 
-A curva ROC é um gráfico que ilustra a relação entre a taxa de verdadeiros positivos  e a taxa de falsos positivos  para diferentes limiares de decisão de um classificador. Cada ponto na curva representa um par correspondente a um determinado limiar. A análise da curva ROC permite identificar o equilíbrio entre sensibilidade (capacidade de identificar corretamente os positivos) e especificidade (capacidade de identificar corretamente os negativos) do modelo. Ela representa graficamente o equilíbrio entre:
+A curva ROC é um gráfico que ilustra a relação entre a taxa de verdadeiros positivos e a taxa de falsos positivos para diferentes limiares de decisão de um classificador. Cada ponto na curva representa um par correspondente a um determinado limiar. A análise da curva ROC permite identificar o equilíbrio entre sensibilidade (capacidade de identificar corretamente os positivos) e especificidade (capacidade de identificar corretamente os negativos) do modelo. Ela representa graficamente o equilíbrio entre:
 
-**Sensibilidade: TPR (True Positive Rate):**  
-Taxa de Verdadeiros Positivos. Sinônimo de sensibilidade:  
+**Sensibilidade: TPR (True Positive Rate):**\
+Taxa de Verdadeiros Positivos. Sinônimo de sensibilidade:\
 $$ TPR = \frac{TP}{TP + FN} $$
 
-**1 - Especificidade: FPR (False Positive Rate):**  
-Taxa de Falsos Positivos. Complementar à especificidade:  
+**1 - Especificidade: FPR (False Positive Rate):**\
+Taxa de Falsos Positivos. Complementar à especificidade:\
 $$ FPR = \frac{FP}{FP + TN} $$
 
-**TP (True Positives):**  
+**TP (True Positives):**\
 Verdadeiros Positivos. Casos corretamente classificados como positivos.
 
-**FN (False Negatives):**  
+**FN (False Negatives):**\
 Falsos Negativos. Casos positivos erroneamente classificados como negativos.
 
-**FP (False Positives):**  
+**FP (False Positives):**\
 Falsos Positivos. Casos negativos erroneamente classificados como positivos.
 
-**TN (True Negatives):**  
+**TN (True Negatives):**\
 Verdadeiros Negativos. Casos corretamente classificados como negativos.
 
 A curva é construída variando o limiar de decisão do classificador, permitindo visualizar diferentes trade-offs entre estes dois parâmetros. Na prática:
 
-- Curvas mais próximas do canto superior esquerdo indicam melhor desempenho
+-   Curvas mais próximas do canto superior esquerdo indicam melhor desempenho
 
-- A **linha diagonal** (AUC = 0.5) representa classificação aleatória
+-   A **linha diagonal** (AUC = 0.5) representa classificação aleatória
 
 ![Curva ROC](images/curvaROC.png){fig-align="center"}
 
@@ -2109,9 +2137,9 @@ $$
 
 Sendo interpretada como:
 
-- $0.5$: Classificação aleatória
-- $0.7-0.8$: Discriminação aceitável
-- $0.8-0.9$: Excelente desempenho
-- $>0.9$: Classificação excepcional
+-   $0.5$: Classificação aleatória
+-   $0.7-0.8$: Discriminação aceitável
+-   $0.8-0.9$: Excelente desempenho
+-   $>0.9$: Classificação excepcional
 
 A interpretação probabilística da AUC é que ela representa a probabilidade de que o classificador atribua uma pontuação mais alta a uma amostra positiva escolhida aleatoriamente em comparação com uma amostra negativa escolhida aleatoriamente. Por exemplo, uma AUC de 0,85 significa que há 85% de chance de o modelo classificar corretamente uma amostra positiva acima de uma negativa.
