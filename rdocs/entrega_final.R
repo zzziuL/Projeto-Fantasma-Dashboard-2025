@@ -90,11 +90,6 @@ dispersao <- ggplot(cliente, aes(x = Height_dm, y = Weight_lbs)) +
     size = 3,
     alpha = 0.3
   ) +
-  geom_smooth(
-    method = "lm",
-    se = FALSE,
-    color = "#003366"
-  ) +
   labs(
     x = "Altura (cm)",
     y = "Peso (Kg)"
