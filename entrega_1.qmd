@@ -12,7 +12,7 @@ source("rdocs/entrega_1.R")
 
 Essa análise tem como objetivo mostrar a a receita média das lojas registradas, nos anos de 1880 até 1889, para que seja possivel vizualizar as variações da quantidade de receita média anual produzida ao longo do tempo.
 
-## Análise da receita média anual
+## Análise temporal da Receita média anual
 
 ```{r}
 #| label: fig-linha
