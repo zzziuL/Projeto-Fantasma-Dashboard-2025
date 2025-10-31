@@ -12,7 +12,7 @@ source("rdocs/entrega_final.R")
 
 # Introdução
 
-O seguinte projeto tem como objetivo realizar análises estatísticas para a a Old Town Road.Ltda, visando uma maior compreensão do mercado, dos clientes e do comércio na região, para ajudar a tomar decisões de investimento. Para isso, foram utilizadas análises decristivas para traçar perfis e rankings e análises de tendência temporal para avaliar receita.   
+O seguinte projeto tem como objetivo realizar análises estatísticas para a a Old Town Road.Ltda, visando uma maior compreensão do mercado, dos clientes e do comércio na região, para ajudar a tomar decisões de investimento. Para isso, foram utilizadas análises descritivas para traçar perfis, rankings e análises de tendência temporal para avaliar receita.   
 O estudo utilizou um banco de dados fornecido pelo cliente, que prove informações das diversas empresas ligadas a holding. As pricipais variáveis incluiram dados de receita das lojas, características dos cliente, dados geográficos e informações operacionais.   
 Para a execução das análises e tratamento dos dados, foi utilizado o software RStudio. A versão utilizada no desenvolvimento do projeto foi a 2025.09.1+401.   
 
@@ -226,7 +226,7 @@ dispersao
 Medidas resumo das Variáveis Peso e Altura
 :::
 
-Ao analisarmos a $\ref{fig-dispersao}$ observamos uma clara têndencia positiva entre as duas variáveis. Os pontos no gráfico (clientes), mostram que à medida que a altura aumenta, o peso tende a aumentar. A linha de regressão confirma essa associação positiva.   
+Ao analisarmos a $\ref{fig-dispersao}$ observamos uma clara têndencia positiva entre as duas variáveis. Os pontos no gráfico (clientes), mostram que à medida que a altura aumenta, o peso tende a aumentar.   
 Analisando o [**Quadro** @quad-quadro_resumo1] que representa o peso e a altura dos clientes, observa-se que o peso médio dos cliente é de 75Kg, variando de um mínimo de 45Kg a um máximo de 119,30 Kg. Entretanto, as medidas de centralidade variam pouco, em torno de 70 a 80. Já a altura média, é de 171,48cm, com clientes variando entre 150cm e 200cm, tendo valores de centralidade também próximos.
 
 ## Análise da variável idade pelas lojas de Âmbar Seco
