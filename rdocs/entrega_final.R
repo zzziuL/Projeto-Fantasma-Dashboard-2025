@@ -103,6 +103,9 @@ cliente %>%
 cliente %>%
   print_quadro_resumo(var_name = Height_dm)
 
+#Correlacao de Pearson
+cor(cliente$Weight_lbs, cliente$Height_dm, method = "pearson")
+
 #-----------------ANALISE_3----------------------------------------------------#
 
 #Renomeando variaveis
@@ -147,65 +150,59 @@ final <- inner_join(relatoriovendas, infosvendas, by = "SaleID")
 final <- inner_join(final, produtos, by = "ItemID")
 final <- inner_join(final, loja, by = "StoreID")
 
-#Descobrindo as lojas de maior receita
-final <- final %>%
+#filtrando
+final_89 <- final %>%
   mutate(Ano = substr(Date, 1, 4),
-         Receita = UnityPrice*Quantity)
+         Receita = UnityPrice * Quantity) %>%
+  filter(Ano == 1889)
 
-final <- filter(final, Ano == 1889)
-
-top3lojas <- final %>%
+#descobrindo lojas
+top3lojas <- final_89 %>%
   group_by(NameStore) %>%
   summarise(Receita_total = sum(Receita, na.rm = TRUE)) %>%
   arrange(desc(Receita_total)) %>%
   head(3)
 
-#Criando frequencia
-teste <- final %>%
-  mutate(NameStore = case_when(
-    NameStore %>% str_detect("Loja Ouro Fino") ~ "Loja Ouro Fino",
-    NameStore %>% str_detect("Loja TendTudo") ~ "Loja TendTudo",
-    NameStore %>% str_detect("Ferraria Apache") ~ "Ferraria Apache"
-  )) %>%
-  filter(!is.na(NameStore)) %>%
+filtrolojas <- final_89 %>%
+  filter(NameStore %in% top3lojas$NameStore)
+
+#produtos
+top3produtos <- filtrolojas %>%
   group_by(NameStore, NameProduct) %>%
-  summarise(freq = n()) %>%
+  summarise(Quantidade = sum(Quantity, na.rm = TRUE),
+            .groups = 'drop') %>%
+  group_by(NameStore) %>%
+  arrange(desc(Quantidade)) %>%
+  slice_head(n = 3) %>%
+  ungroup()
+
+#juntando dados
+teste <- filtrolojas %>%
+  inner_join(top3produtos %>% select(NameStore, NameProduct), 
+             by = c("NameStore", "NameProduct")) %>%
+  group_by(NameStore, NameProduct) %>%
+  summarise(Quantidade_total = sum(Quantity, na.rm = TRUE),
+            .groups = 'drop')
+
+#calculando por loja
+totaloja <- teste %>%
+  group_by(NameStore) %>%
+  summarise(Total = sum(Quantidade_total))
+
+# Preparando labels
+teste <- teste %>%
+  left_join(totaloja, by = "NameStore") %>%
   mutate(
-    freq_relativa = round(freq / sum(freq) * 100, 1)
-    )
-porcentagens <- str_c(teste$freq_relativa, "%") %>% str_replace("
-\\.", ",")
-legendas <- str_squish(str_c(teste$freq, " (", porcentagens, ")")
-)
+    porcentagem = round(Quantidade_total / Total * 100, 1),
+    legendas = paste0(Quantidade_total, " (", porcentagem, "%)")
+  )
 
-#Filtrando produtos
-top3apache <- teste %>%
-  filter(NameStore == "Ferraria Apache") %>%
-  arrange(desc(freq)) %>%
-  head(3)
-
-top3ouro <- teste %>%
-  filter(NameStore == "Loja Ouro Fino") %>%
-  arrange(desc(freq)) %>%
-  head(3)
-
-top3tend <- teste %>%
-  filter(NameStore == "Loja TendTudo") %>%
-  arrange(desc(freq)) %>%
-  head(3)
-
-teste <- rbind(top3apache, top3ouro, top3tend)
-
-porcentagens <- str_c(teste$freq_relativa, "%") %>% str_replace("
-\\.", ",")
-legendas <- str_squish(str_c(teste$freq, " (", porcentagens, ")")
-)
-
+teste
 #Criando grafico
 coluna <- ggplot(teste) +
   aes(
-    x = fct_reorder(NameStore, freq, .desc = T),
-    y = freq,
+    x = NameStore,
+    y = Quantidade_total,
     fill = NameProduct,
     label = legendas
   ) +
@@ -213,10 +210,10 @@ coluna <- ggplot(teste) +
   geom_text(
     position = position_dodge(width = .9),
     vjust = -0.5, hjust = 0.5,
-    size = 3
+    size = 2.3
   ) +
-  labs(x = "Loja", y = "Frequência") +
+  labs(x = "Loja", y = "Quantidade Vendida") +
   theme_estat() +
-  labs(fill = "Produto") +
-  ylim(c(0,25))
+  labs(fill = "Produto")
 coluna
+
