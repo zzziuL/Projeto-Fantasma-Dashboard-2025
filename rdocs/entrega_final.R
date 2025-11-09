@@ -173,7 +173,7 @@ top3produtos <- filtrolojas %>%
             .groups = 'drop') %>%
   group_by(NameStore) %>%
   arrange(desc(Quantidade)) %>%
-  slice_head(n = 3) %>%
+  slice_max(order_by = Quantidade, n = 3, with_ties = TRUE) %>%
   ungroup()
 
 #juntando dados
@@ -210,7 +210,7 @@ coluna <- ggplot(teste) +
   geom_text(
     position = position_dodge(width = .9),
     vjust = -0.5, hjust = 0.5,
-    size = 2.3
+    size = 2
   ) +
   labs(x = "Loja", y = "Quantidade Vendida") +
   theme_estat() +

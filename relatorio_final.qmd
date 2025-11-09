@@ -331,7 +331,7 @@ coluna
 ```
   Observando a $\ref{fig-coluna}$ conclui-se que os 3 produtos mais vendidos em cada loja é significativamente diferente entre as 3 lojas de maior receita, indicando uma forte especialização. A Loja TendTudo se destaca com a espingarda como seu carro-chefe. A Ferraria Apache e a Loja Ouro Fino apresentam um empate no volume de seus principais produtos, chapéu de couro e botas de couro, respectivamente. 
 
-  Nota-se também a exclusividade de certos produtos: botas de couro (Ouro Fino), machado (Apache) e Colt .45 (TendTudo) aparecem no top 3 de apenas uma loja, reforçando a ideia de especialização. Por outro lado, produtos como whisky e espingarda demonstram uma popularidade mais ampla, figurando entre os mais vendidos em duas das três lojas.
+  Nota-se também a exclusividade de certos produtos: botas de couro (Ouro Fino), machado (Apache) e Colt .45 (TendTudo) aparecem no top 3 de apenas uma loja, reforçando a ideia de especialização. Por outro lado, produtos como whisky e espingarda demonstram uma popularidade mais ampla, figurando entre os mais vendidos em duas das três lojas. Além disso é importante citar sobre a Ferraria Apache que na verdade apresenta quatro produtos no topo, com machado e whisky empatados com 41 unidades. Isso revela um perfil de vendas mais diversificado em comparação com as outras.
 
 # Conclusão
 
