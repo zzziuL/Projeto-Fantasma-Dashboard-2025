@@ -270,8 +270,9 @@ Medidas resumo da Variável Peso
 Medidas resumo da Variável Altura
 :::
 
-Ao analisarmos a $\ref{fig-dispersao}$ observamos uma clara têndencia positiva entre as duas variáveis. Os pontos no gráfico, mostram que à medida que a altura aumenta, o peso tende a aumentar. Para confirmar esta observação, o teste de correlação de Pearson resultou em r = 0,697 (p < 0,001), indicando uma correlação positiva de força moderada a forte.   
-Analisando o [**Quadro** @quad-peso] e [**Quadro** @quad-altura] que representam o peso e a altura dos clientes, observa-se que o peso médio dos clientes é de 75kg, variando de um mínimo de 45kg a um máximo de 119,30kg. As medidas de centralidade variam pouco, em torno de 70 a 80 Kg. Já a altura média é de 171,48cm, com clientes variando entre 150cm e 200cm, tendo valores de centralidade também próximos.
+  Ao analisarmos a $\ref{fig-dispersao}$ observamos uma clara têndencia positiva entre as duas variáveis. Os pontos no gráfico, mostram que à medida que a altura aumenta, o peso tende a aumentar. Para confirmar esta observação, o teste de correlação de Pearson resultou em r = 0,697 (p < 0,001), indicando uma correlação positiva de força moderada a forte.   
+  
+  Analisando o [**Quadro** @quad-peso] e [**Quadro** @quad-altura] que representam o peso e a altura dos clientes, observa-se que o peso médio dos clientes é de 75kg, variando de um mínimo de 45kg a um máximo de 119,30kg. As medidas de centralidade variam pouco, em torno de 70 a 80 Kg. Já a altura média é de 171,48cm, com clientes variando entre 150cm e 200cm, tendo valores de centralidade também próximos.
 
 ## Análise da variável idade pelas lojas de Âmbar Seco
 
@@ -313,7 +314,9 @@ bp
 Medidas resumo das idades dos clientes por loja
 :::
 
-Analisando a $\ref{fig-bp}$ e o [**Quadro** @quad-idade],observa-se que a loja Vendinha Rápida se distancia das demais, possuindo o público consistentemente mais velho, média 40,35 e mediana 41. As outras três lojas possuem médias muito próximas, com Ferraria Seca, média 33,67, e Saloon de média 34,2 atendendo um público ligeiramente mais jovem que o Banco Careca de média 34,92. Além disso, vale destacar a dispersão dos dados, as lojas Saloon e Ferraria Seca possuem os maiores desvios padrão, 12,70 e 13,31, respectivamente. Indicando uma diversidade de público muito maior, que é confirmada pela $\ref{fig-bp}$ com a presença de diversos outliers, representando clientes com idades muito acima da concentração. Em contraste, o Banco Careca é a loja com o público mais homogêneo e com a menor amplitude de idade, possuindo o menor valor máximo entre as quatro lojas.
+  Analisando a $\ref{fig-bp}$ e o [**Quadro** @quad-idade],observa-se que a loja Vendinha Rápida se distancia das demais, possuindo o público consistentemente mais velho, média 40,35 e mediana 41. As outras três lojas possuem médias muito próximas, com Ferraria Seca, média 33,67, e Saloon de média 34,2 atendendo um público ligeiramente mais jovem que o Banco Careca de média 34,92. 
+
+  Além disso, vale destacar a dispersão dos dados, as lojas Saloon e Ferraria Seca possuem os maiores desvios padrão, 12,70 e 13,31, respectivamente. Indicando uma diversidade de público muito maior, que é confirmada pela $\ref{fig-bp}$ com a presença de diversos outliers, representando clientes com idades muito acima da concentração. Em contraste, o Banco Careca é a loja com o público mais homogêneo e com a menor amplitude de idade, possuindo o menor valor máximo entre as quatro lojas.
 
 ## Análise dos 3 produtos mais vendidos nas lojas de maior receita em 1889
 
@@ -326,7 +329,9 @@ Esta análise tem o objetivo de identificar os produtos mais vendidos nas 3 loja
 
 coluna
 ```
-Observando a $\ref{fig-coluna}$ conclui-se que os 3 produtos mais vendidos em cada loja é significativamente diferente entre as 3 lojas de maior receita, indicando uma forte especialização. A Loja TendTudo se destaca com a espingarda como seu carro-chefe. A Ferraria Apache e a Loja Ouro Fino apresentam um empate no volume de seus principais produtos, chapéu de couro e botas de couro, respectivamente. Nota-se também a exclusividade de certos produtos: botas de couro (Ouro Fino), machado (Apache) e Colt .45 (TendTudo) aparecem no top 3 de apenas uma loja, reforçando a ideia de especialização. Por outro lado, produtos como whisky e espingarda demonstram uma popularidade mais ampla, figurando entre os mais vendidos em duas das três lojas.
+  Observando a $\ref{fig-coluna}$ conclui-se que os 3 produtos mais vendidos em cada loja é significativamente diferente entre as 3 lojas de maior receita, indicando uma forte especialização. A Loja TendTudo se destaca com a espingarda como seu carro-chefe. A Ferraria Apache e a Loja Ouro Fino apresentam um empate no volume de seus principais produtos, chapéu de couro e botas de couro, respectivamente. 
+
+  Nota-se também a exclusividade de certos produtos: botas de couro (Ouro Fino), machado (Apache) e Colt .45 (TendTudo) aparecem no top 3 de apenas uma loja, reforçando a ideia de especialização. Por outro lado, produtos como whisky e espingarda demonstram uma popularidade mais ampla, figurando entre os mais vendidos em duas das três lojas.
 
 # Conclusão
 
